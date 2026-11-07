@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react';
-import axios from 'axios';
 import { axiosInstance } from './axios.js';
 function App() {
   const [users, setUsers] = useState([])
@@ -59,6 +58,10 @@ function App() {
       return
     }
     const response = await axiosInstance.put(`/users/${formData.id}`, formData)
+    setFormData({
+      name:'',
+      email:''
+    })
     fetchData()
   }
 
@@ -90,6 +93,7 @@ function App() {
         <br></br>
         {formData.editMode?
         <button 
+        type='button'
         onClick={editData}>
           Save Data
         </button>
