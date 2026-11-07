@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 440px;
+  padding: 2rem 1rem;
+}
+
+
+form {
+  background: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+form input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+
+form button[type="submit"],
+form button:not([type]) {
+  background-color: #3b82f6;
+  color: white;
+  margin-top: 0.25rem;
+}
+
+form button[type="submit"]:hover,
+form button:not([type]):hover {
+  background-color: #2563eb;
+}
+
+
+div > div[key] {
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: border-color 0.2s;
+}
+
+div > div[key]:hover {
+  border-color: #94a3b8;
+}
+
+div > div > div:nth-child(1) {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+div > div > div:nth-child(2) {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+div > div > button {
+  width: fit-content;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  margin-right: 0.4rem;
+  display: inline-block;
+  margin-top: 0.2rem;
+}
+
+
+div > div > button:nth-of-type(2) {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+div > div > button:nth-of-type(2):hover {
+  background-color: #e2e8f0;
+}
+
+
+div > div > button:nth-of-type(1) {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+div > div > button:nth-of-type(1):hover {
+  background-color: #fecaca;
+}
